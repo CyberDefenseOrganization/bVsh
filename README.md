@@ -13,6 +13,7 @@
 [Dependencies](#dependencies) •
 [Configuration](#configuration) •
 [Deployment](#deployment)
+[Semantics](#semantics)
 
 </div>
 
