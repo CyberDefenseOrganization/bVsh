@@ -12,7 +12,7 @@
 [About](#about) •
 [Dependencies](#dependencies) •
 [Configuration](#configuration) •
-[Deployment](#deployment)
+[Deployment](#deployment) •
 [Semantics](#semantics)
 
 </div>
