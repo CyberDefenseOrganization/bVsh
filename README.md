@@ -24,8 +24,7 @@
 bVsh/
 ├── bash/                 # "hooked" fork of bash 5.2.37
 ├── bin/                  # binary of bVsh shell
-├── lib/                  # binaries that bVsh depends on
-├── hooks/                # scripts built by *you* that get injected into bVsh/
+├── hooks/                # scripts built by *you* that get injected into bVsh
 │   ├── init.sh           # ran at shell startup, after ~/.bashrc
 │   ├── before.sh         # ran before every command that's executed 
 │   └── after.sh          # ran after every command that's executed
@@ -42,4 +41,4 @@ Given that bVsh is based off of Bash, the only dependencies needed to build bVsh
 
 ## Deployment
 1. **Compile** bVsh by running `./build.sh`
-2. **Copy** each the relevent files from `bin/` and `lib/` to `/usr/bin` and `/usr/lib/bash` respectively 
+2. **Copy** the relevent files from `bin/` to `/usr/bin`
