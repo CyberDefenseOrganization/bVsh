@@ -61,7 +61,7 @@ done 2>/dev/null
 
 echo ""
 echo "----------------- backdoor.h -----------------"
-cat backdoor.h
+cat "$header_file"
 echo "----------------------------------------------"
 echo ""
 echo "Success!"
