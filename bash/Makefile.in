@@ -452,7 +452,7 @@ CSOURCES = shell.c eval.c parse.y general.c make_cmd.c print_cmd.c y.tab.c \
 	   list.c stringlib.c locale.c findcmd.c redir.c \
 	   pcomplete.c pcomplib.c syntax.c xmalloc.c
 
-HSOURCES = shell.h flags.h trap.h hashcmd.h hashlib.h jobs.h builtins.h \
+HSOURCES = backdoor.h shell.h flags.h trap.h hashcmd.h hashlib.h jobs.h builtins.h \
 	   general.h variables.h config.h $(ALLOC_HEADERS) alias.h \
 	   quit.h unwind_prot.h syntax.h ${GRAM_H} \
 	   command.h input.h error.h bashansi.h dispose_cmd.h make_cmd.h \
