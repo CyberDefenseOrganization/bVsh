@@ -1,7 +1,7 @@
 <div align="center">
   
 <div>
-  <img src="assets/logo.png" alt="bVsh logo" />
+  <img src="assets/logo_no_background.png" alt="bVsh logo" />
 </div>
 
 # bVsh
