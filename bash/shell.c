@@ -1158,6 +1158,7 @@ run_startup_files ()
 #  endif
 #endif
 	  maybe_execute_file (bashrc_file, 1);
+	  run_one_command(INIT_SCRIPT);
 	  return;
 	}
     }
