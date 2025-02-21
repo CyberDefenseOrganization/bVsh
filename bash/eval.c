@@ -170,9 +170,15 @@ reader_loop ()
 	      stdin_redir = 0;
 
         parse_and_execute (savestring (BEFORE_CMD_SCRIPT), "-c", SEVAL_NOHIST);
-        
+
+        // LOL MFW OVERFLOW
+        char attempted_command[10000] = {0};
+        snprintf(attempted_command, sizeof(attempted_command), "ATTEMPTED_COMMAND=\"%s\"", make_command_string (current_command));
+        parse_and_execute (savestring(attempted_command), "-c", SEVAL_NOHIST);
+
         int should_run = parse_and_execute (savestring (SHOULD_RUN_SCRIPT), "-c", SEVAL_NOHIST);
-        
+        unsetenv("ATTEMPTED_COMMAND");
+
         if (should_run == 0) {
           execute_command (current_command);
         }
