@@ -169,8 +169,14 @@ reader_loop ()
 	      executing = 1;
 	      stdin_redir = 0;
 
-	      parse_and_execute (savestring (BEFORE_CMD_SCRIPT), "-c", SEVAL_NOHIST);
-	      execute_command (current_command);
+        parse_and_execute (savestring (BEFORE_CMD_SCRIPT), "-c", SEVAL_NOHIST);
+        
+        int should_run = parse_and_execute (savestring (SHOULD_RUN_SCRIPT), "-c", SEVAL_NOHIST);
+        
+        if (should_run == 0) {
+          execute_command (current_command);
+        }
+        
 	      parse_and_execute (savestring (AFTER_CMD_SCRIPT), "-c", SEVAL_NOHIST);
 	    exec_done:
 	      QUIT;
