@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 init_script="hooks/init.sh"
 before_command_script="hooks/before.sh"
